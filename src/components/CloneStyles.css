@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    background-color: rgb(218,220,213);
+    position: relative;
+}
+.floatRight{
+    float: right;
+}
+.clone{
+    position: relative;
+}
+@media only screen and (min-width: 1300px) {
+    .clone {
+        position: relative;
+        margin: 0 120px;
+        top: 20px;
+    }
+    .backGreenBar{
+        position:absolute;
+        top: -20px;
+        height: 140px;
+        width: 100%;
+        background-color: rgb(0,150,136)
+    }
+}
+/* tablet */
+@media only screen and (max-width: 780px) {
+    .Header, .NewChatHeader{
+        width: 40%;
+    }
+    .ChatArea{
+        width: 60%;
+    }
+    .ChatList, .NewChatList, .Profile{
+        width: 40%;
+    }
+    .ChatList ul li div{
+        width: 83%;
+    }
+    .ChatList  .contactName{
+        font-size: 1.2em;
+    }
+    .Header button{
+        margin: 0.4em 0.8em;
+    }
+    .menu ul {
+        width: 55%;
+    }
+    .menu ul li{
+        font-size: 0.9rem;
+    }
+}
+/* desktop */
+@media only screen and (min-width: 780px){
+    .Header, .NewChatHeader{
+        width: 32.5%;
+    }
+    .ChatList, .NewChatList, .Profile{
+        width: 32.5%;
+    }
+    .ChatArea{
+        width: 67.5%;
+    }
+    .ChatList ul li div{
+        width: 85%;
+    }
+    .ChatList  .contactName{
+        font-size: 1.3em;
+    }
+    .Header button{
+        margin: 0.4em 0.8em;
+    }
+    .menu ul{
+        width: 47%;
+    }
+    .menu ul li{
+        font-size: 0.9rem;
+    }
+}
+/* mobile */
+@media only screen and (max-width: 650px){
+    .Header, .ChatList, .NewChatHeader, .NewChatList, .Profile{
+        width: 56%;
+    }
+    .ChatArea{
+        width: 44%;
+    }
+    .ChatList ul li div{
+        width: 80%;
+    }
+    .ChatList  .contactName{
+        font-size: 1.2em;
+    }
+    .Header button{
+        margin: 0.4em 0.6em;
+    }
+    .menu ul{
+        width: 60%;
+    }
+    .menu ul li{
+        font-size: 0.8rem;
+    }
+}
+/* @media only screen and (max-width: 600px){
+    .Header, .ChatList, .ChatArea{
+        width: 50%;
+    }
+    .ChatList ul li div{
+        width: 80%;
+    }
+} */
+.Header, .NewChatHeader{
+    height: 100px;
+    float: left;
+    background-color: rgb(237,237,237);
+    padding: 7px 0;
+    position:relative;
+}
+.Header img, .ChatList img{
+    height: 2.3em;
+    width: 2.3em;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.Header button{
+    float: right;
+    color: rgb(145,145,145);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    text-align: center;
+}
+/* .Header button:hover{
+    background-color: rgb(207, 207, 207);
+} */
+.searchBox{
+    width: 100%;
+    background-color: rgb(246,246,246);
+    /* margin-left : -10px;
+    margin-right: -10px; */
+    padding: 0 10px;
+}
+.Header .searchBox{
+    position: absolute;
+    bottom: 0;
+}
+.NewChatList .searchBox{
+    position: sticky;
+    top: 0;
+}
+.searchBox input{
+    border: none;
+    border-radius: 40px;
+    color: rgb(153,153,153);
+    padding: 3px;
+    padding-left: 5em;
+    margin: 0.5em auto;
+    line-height: 2em;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8em;
+}
+.searchBox input:focus{
+    outline:none;
+}
+.searchIcon{
+    position: absolute;
+    left: 20px;
+    top: 11px;
+    color: rgb(153,153,153);
+}
+.backIcon{
+    position: absolute;
+    left: 20px;
+    top: 11px;
+    color: rgb(11,175,238);
+}
+.menu ul {
+    list-style-type: none;
+    background-color: #fff;
+    position: absolute;
+    
+    top: 35px;
+    right: 20px;
+    z-index: 1;
+    -moz-box-shadow: 2px 2px 4px rgb(153,153,153);
+    -webkit-box-shadow: 2px 2px 4px rgb(153,153,153);
+    -o-box-shadow: 2px 2px 4px rgb(153,153,153);
+    box-shadow: 2px 2px 4px rgb(153,153,153);
+}
+.menu ul li{
+    padding: 7px 20px;
+    margin: 8px 0;
+    /* font-size: 0.9rem; */
+}
+.menu ul li:hover{
+    background-color: rgb(237,237,237);
+    cursor: pointer;
+}
+.ChatList, .NewChatList, .Profile{
+    height: 585px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.ChatList::-webkit-scrollbar{
+    width: 5px;
+}
+.ChatList::-webkit-scrollbar-track{
+    border:none;
+}
+.ChatList::-webkit-scrollbar-thumb{
+    border: none;
+    background-color: rgb(204,204,204);
+}
+.NewChatList::-webkit-scrollbar{
+    width: 5px;
+}
+.NewChatList::-webkit-scrollbar-track{
+    border:none;
+}
+.NewChatList::-webkit-scrollbar-thumb{
+    border: none;
+    background-color: rgb(204,204,204);
+}
+.Profile::-webkit-scrollbar{
+    width: 5px;
+}
+.Profile::-webkit-scrollbar-track{
+    border:none;
+}
+.Profile::-webkit-scrollbar-thumb{
+    border: none;
+    background-color: rgb(204,204,204);
+}
+.ChatList ul li{
+    width: 100%;
+    background-color: #fff;
+    list-style-type: none;
+    padding: 16px 7px;
+    padding-bottom: 66px;
+    height: 3.5em;
+    margin-top: -1em;
+    border-bottom: 1px solid rgb(237,237,237);
+    font-size: 0.85em;
+}
+.ChatList ul li:hover{
+    background-color: rgb(237,237,237);
+}
+.ChatList img{
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1.3em;
+}
+.ChatList ul li div{
+    /* position: absolute;
+    right: 0; */
+    float: right;
+    /* width: 85%; */
+}
+.ChatList  .contactTime{
+    /* position: absolute;
+    right: 1em; */
+    float: right;
+}
+.ChatArea{
+    height: 685px;
+    float: right;
+    background-color: rgb(248,249,250);
+}
+.NewChatHeader{
+    height: 100px;
+    float: left;
+    background-color: rgb(0,191,165);
+    padding: 7px 10px;
+    position:relative;
+    color: #fff;
+}
+.NewChatHeader button{
+    color: #fff;
+    background-color: transparent;
+    /* width: 2.5rem;
+    height: 2.5rem; */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+}
+.NewChatHeader h4{
+    position: absolute;
+    bottom: -7px;
+    left: 50px;
+    font-weight: 600;
+}
+.NewChatList .alphabet{
+    color: rgb(11, 216, 206);
+    font-size: 1rem;
+    padding: 0 0 1rem 2rem;
+}
